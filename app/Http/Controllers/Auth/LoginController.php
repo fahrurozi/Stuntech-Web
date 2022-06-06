@@ -33,7 +33,7 @@ class LoginController extends Controller
             if ($responseBody->profile !== null) {
                 return redirect()->route('home');
             } else {
-                dd("Your token has expired");
+                return view('auth.login');
             }
         } else {
             return view('auth.login');
@@ -70,8 +70,6 @@ class LoginController extends Controller
 
         $responseBody = json_decode($response->getBody());
         $request->session()->put('token.access_token', $responseBody->token);
-        $request->session()->put('user.username', $username);
-        $request->session()->put('user.password', $password);
 
         return redirect()->route('home');
     }
