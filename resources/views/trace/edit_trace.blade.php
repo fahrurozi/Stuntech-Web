@@ -32,7 +32,7 @@
                         <a href="/article/index" class="btn btn-danger"><i class="fas fa-times"></i></a>
                         <a href=""><button type="submit" class="btn btn-primary"><i class="fas fa-check"></i></button></a>  
                     </div>
-                </form>
+                </form> 
             </div>
         </div>    
     </div>
