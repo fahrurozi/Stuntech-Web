@@ -2,7 +2,7 @@
 @section('content')
 <html>
     <head>
-        <title>Create Article Form</title>
+        <title>Create Trace Form</title>
 
         <!-- Summernote -->
         <!-- include libraries(jQuery, bootstrap) -->
@@ -17,65 +17,75 @@
     <body>
     <section class="section">
         <div class="section-header">
-            <h1>Create New Article</h1>
+            <h1>Create New Trace</h1>
         </div> 
         <div class="card">
             <div class="card-body">
-                <form action="#" method="post" enctype="multipart/form-data">
+            <form method="post" action="#" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" class="form-control" name="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="article-content">Article Content</label>
-                        <textarea name="article-content" class="form-control" id="task-textarea"></textarea>
-                    </div>
-                    <!-- <div class="form-group">
-                        <label for="article-items">Article Items</label>
-                        <textarea name="article-items" class="summernote"></textarea>
-                    </div> -->
-                    <div class="form-group">
-                        <label for="article-types">Article Types</label>
-                        <input type="text" class="form-control" name="article-types">
-                    </div>
-                    <div class="form-group">
-                        <label for="article-tags">Article Tags</label>
-                        <input type="text" class="form-control" name="article-tags">
-                    </div>
-                    <div class="form-group">
-                        <div class="float-right">
-                            <a href="/article/index"><button type="button" class="btn btn-danger"><i class="fas fa-times"></i></button></a>
-                            <a href="#"><button type="submit" class="btn btn-primary"><i class="fas fa-check"></i></button></a>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="week">Week</label>
+                            <input type="number" class="form-control" id="week" placeholder="0, 1, 2, etc.">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="height">Height</label>
+                            <input type="number" class="form-control" id="height" placeholder="1, 2, 3, etc.">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="weight">Weight</label>
+                            <input type="number" class="form-control" id="weight" placeholder="1, 2, 3, etc.">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="ageday">Age Day</label>
+                            <input type="number" class="form-control" id="ageday" placeholder="1, 2, 3, etc.">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="exclusiveasi">Exclusive Asi</label>
+                            <!-- <input type="dropdown" class="form-control" id="inputPassword4" placeholder="Password"> -->
+                            <select class="custom-select" id="exclusiveasi">
+                                <option selected>Choose</option>
+                                <option value="1">False</option>
+                                <option value="2">True</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="diseasehistory">Disease History</label>
+                            <!-- <input type="dropdown" class="form-control" id="inputPassword4" placeholder="Password"> -->
+                            <select class="custom-select" id="diseasehistory">
+                                <option selected>Choose</option>
+                                <option value="1">False</option>
+                                <option value="2">True</option>
+                            </select>
                         </div>
                     </div>
-                </form> 
+                    <div class="form-group">
+                        <label class="d-block">Immunization History</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="imunizationhistory1">
+                            <label class="form-check-label" for="imunizationhistory1">
+                            Covid
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="imunizationhistory2">
+                            <label class="form-check-label" for="imunizationhistory2">
+                            Campak
+                            </label>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <a href="/trace/index" class="btn btn-danger"><i class="fas fa-times"></i></a>
+                        <a href="#"><button type="submit" class="btn btn-primary"><i class="fas fa-check"></i></button></a>  
+                    </div>
+                </form>  
             </div>
         </div>
     </section>
-        <!-- script -->
-        <!-- <script type="text/javascript">
-            $(document).ready(function() {
-            $('.summernote').summernote();
-            });
-        </script> -->
     </body>
 </html>
 @endsection
 
-@section('scripts')
-<script>
-    ClassicEditor
-        .create(document.querySelector('#task-textarea'))
-        .catch (error => {
-            console.error(error);
-        });
-</script>
-@endsection
 
 
 
