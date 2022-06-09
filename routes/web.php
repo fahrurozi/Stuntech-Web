@@ -24,6 +24,8 @@ Route::get('/dashboard', 'Main\HomeController@index')->name('home');
 
 //Article
 Route::get('/article', 'Main\Admin\ArticleController@index')->name('article');
+Route::get('/article/create', 'Main\Admin\ArticleController@create')->name('article.create');
+Route::post('/article/store', 'Main\Admin\ArticleController@store')->name('article.store');
 
 // User
 Route::get('/user', 'Main\Admin\UserController@index')->name('user');

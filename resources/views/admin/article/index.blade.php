@@ -1,11 +1,15 @@
+@extends('layout.template')
+
+@section('content')
 <?php
 // dd($articles);
 ?>
 <h1>Article</h1>
-<table border="1">
+<a href="{{ route('article.create') }}">Tambah</a>
+<table class="table">
     <thead>
-    <td>title</td>
-    <td>content</td>
+        <td>title</td>
+        <td>content</td>
     </thead>
     @foreach($articles as $article)
     <tr>
@@ -14,3 +18,4 @@
     </tr>
     @endforeach
 </table>
+@endsection

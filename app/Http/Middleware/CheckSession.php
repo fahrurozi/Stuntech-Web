@@ -16,6 +16,7 @@ class CheckSession
      */
     public function handle($request, Closure $next)
     {
+        // dd(session()->get('token.access_token'));
         if(session()->get('token.access_token') !==null){ 
             $client = new Client();
             $url = "http://127.0.0.1:8000/api/v1/user";
@@ -30,6 +31,8 @@ class CheckSession
                     ]
                 ]
             );
+            $statuscode = $response->getStatusCode();
+            // dd($statuscode);
             
             $responseBody = json_decode($response->getBody());
             // dd($responseBody->profile !== null);
