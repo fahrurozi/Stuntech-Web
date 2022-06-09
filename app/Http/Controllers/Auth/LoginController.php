@@ -12,7 +12,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        
+        // dd("tes");
         if (session()->get('token.access_token') !== null ) {
             $client = new Client();
             $url = "http://127.0.0.1:8000/api/v1/user";

@@ -20,6 +20,7 @@ class ArticleController extends Controller
     public function index()
     {
         // dd(session()->get('token.access_token'));
+        // e41b32e68760372d018a202a501e390431d23c3b2ee81312b2d64317a059ba6c71dba330866d37510e05d648f997d45f
         $client = new Client();
         $url = "http://127.0.0.1:8000/api/v1/article";
         $response = $client->request(
@@ -41,5 +42,15 @@ class ArticleController extends Controller
         $articles = $responseBody->all_articles;
         // dd($articles);
         return view(ROOT_ADMIN_ARTICLE_PAGE.'index', compact('articles'));
+    }
+
+    public function create()
+    {
+        return view(ROOT_ADMIN_ARTICLE_PAGE.'create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->editordata);
     }
 }
