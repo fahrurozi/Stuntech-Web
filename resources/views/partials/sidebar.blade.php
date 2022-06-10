@@ -20,6 +20,9 @@
         <a href="{{ route('stunting_info') }}" class="nav-link"><i class="fas fa-fire"></i><span>Stunting Info</span></a>
       </li>
       <li class="nav-item">
+        <a href="{{ route('nutrition_info') }}" class="nav-link"><i class="fas fa-info"></i><span>Nutrition Info</span></a>
+      </li>
+      <li class="nav-item">
         <a href="/trace/index" class="nav-link"><i class="far fa-square"></i><span>Trace</span></a>
       </li>
       <li class="nav-item">
