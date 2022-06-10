@@ -48,6 +48,14 @@ Route::get('/dashboard/stunting_info/edit/{id}', 'Main\Admin\StuntingInfoControl
 Route::post('/dashboard/stunting_info/update/{id}', 'Main\Admin\StuntingInfoController@update')->name('stunting_info.update');
 Route::get('/dashboard/stunting_info/destroy/{id}', 'Main\Admin\StuntingInfoController@destroy')->name('stunting_info.destroy');
 
+// Nutrition Info
+Route::get('/dashboard/nutrition_info', 'Main\Admin\NutritionInfoController@index')->name('nutrition_info');
+Route::get('/dashboard/nutrition_info/create', 'Main\Admin\NutritionInfoController@create')->name('nutrition_info.create');
+Route::post('/dashboard/nutrition_info/store', 'Main\Admin\NutritionInfoController@store')->name('nutrition_info.store');
+Route::get('/dashboard/nutrition_info/show/{id}', 'Main\Admin\NutritionInfoController@show')->name('nutrition_info.show');
+Route::get('/dashboard/nutrition_info/edit/{id}', 'Main\Admin\NutritionInfoController@edit')->name('nutrition_info.edit');
+Route::post('/dashboard/nutrition_info/update/{id}', 'Main\Admin\NutritionInfoController@update')->name('nutrition_info.update');
+Route::get('/dashboard/nutrition_info/destroy/{id}', 'Main\Admin\NutritionInfoController@destroy')->name('nutrition_info.destroy');
 
 Route::get('/article/index', function () {
     return view('/article/index_article');
