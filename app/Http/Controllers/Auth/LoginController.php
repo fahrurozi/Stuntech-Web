@@ -70,6 +70,7 @@ class LoginController extends Controller
 
         $responseBody = json_decode($response->getBody());
         $request->session()->put('token.access_token', $responseBody->token);
+        $request->session()->put('userData.username', $username);
 
         return redirect()->route('home');
     }

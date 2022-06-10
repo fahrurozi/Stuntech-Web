@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
-const ROOT_ADMIN_PROFILE_PAGE = 'admin.dashboard.';
+const ROOT_ADMIN_DASHBOARD_PAGE = 'admin.dashboard.';
 
 class HomeController extends Controller
 {
@@ -35,6 +35,6 @@ class HomeController extends Controller
 
         $responseBody = json_decode($response->getBody());
         // dd($responseBody);
-        return view(ROOT_ADMIN_PROFILE_PAGE.'index');
+        return view(ROOT_ADMIN_DASHBOARD_PAGE.'index');
     }
 }

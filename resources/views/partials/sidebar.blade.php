@@ -4,15 +4,20 @@
 <div class="main-sidebar">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="#">STUNTECH</a>
+      <a href="{{ route('home') }}">STUNTECH</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
       <a href="#">ST</a>
     </div>
     <ul class="sidebar-menu">
+      {{-- <a href="{{ route('article') }}" style="display: block">Article</a>
+    <a href="{{ route('user') }}" style="display: block">User</a> --}}
       <li class="menu-header">Dashboard</li>
       <li class="nav-item">
-        <a href="/article/index" class="nav-link"><i class="fas fa-fire"></i><span>Article</span></a>
+        <a href="{{ route('article') }}" class="nav-link"><i class="fas fa-fire"></i><span>Article</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ route('stunting_info') }}" class="nav-link"><i class="fas fa-fire"></i><span>Stunting Info</span></a>
       </li>
       <li class="nav-item">
         <a href="/trace/index" class="nav-link"><i class="far fa-square"></i><span>Trace</span></a>
@@ -25,7 +30,7 @@
       </li>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link"><i class="far fa-user"></i><span>Auth</span></a>
+        <a href="{{ route('user') }}" class="nav-link"><i class="far fa-user"></i><span>User</span></a>
       </li>
     </ul>
   </aside>
