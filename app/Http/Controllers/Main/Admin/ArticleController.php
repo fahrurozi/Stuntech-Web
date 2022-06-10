@@ -41,6 +41,7 @@ class ArticleController extends Controller
         $responseBody = json_decode($response->getBody());
         $articles = $responseBody->all_articles;
         // dd($articles);
+        
         return view(ROOT_ADMIN_ARTICLE_PAGE.'index', compact('articles'));
     }
 
@@ -52,5 +53,9 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         dd($request->editordata);
+    }
+
+    public function show($id){
+
     }
 }
