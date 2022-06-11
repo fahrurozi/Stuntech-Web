@@ -67,6 +67,11 @@ Route::get('/dashboard/care_nutrition/edit/{id}', 'Main\Admin\CareNutritionContr
 Route::post('/dashboard/care_nutrition/update/{id}', 'Main\Admin\CareNutritionController@update')->name('care_nutrition.update');
 Route::get('/dashboard/care_nutrition/destroy/{id}', 'Main\Admin\CareNutritionController@destroy')->name('care_nutrition.destroy');
 
+// Maps
+Route::get('/dashboard/maps', 'Main\Admin\MapsController@index')->name('maps');
+Route::get('/dashboard/maps/add', 'Main\Admin\MapsController@create')->name('maps.create');
+Route::get('/dashboard/maps/store/{place_id}', 'Main\Admin\MapsController@store')->name('maps.store');
+
 Route::get('/article/index', function () {
     return view('/article/index_article');
 });

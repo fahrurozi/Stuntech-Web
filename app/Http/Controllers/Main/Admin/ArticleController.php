@@ -22,7 +22,7 @@ class ArticleController extends Controller
         // dd(session()->get('token.access_token'));
         // e41b32e68760372d018a202a501e390431d23c3b2ee81312b2d64317a059ba6c71dba330866d37510e05d648f997d45f
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'GET',
             $url,

@@ -41,7 +41,7 @@
                             </tr>
                             <tr>
                                 <th class = "col-md-3">Article Cover</th>
-                                <td class = "col-md-9"><img style="height: 200px" src="http://127.0.0.1:8000/static/{{$article->article_cover_file}}" alt=""></td>
+                                <td class = "col-md-9"><img style="height: 200px" src="{{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
                             </tr>
                             <tr>
                                 <th class = "col-md-3">Action</th>
