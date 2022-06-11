@@ -33,6 +33,7 @@ Route::get('/register', 'Auth\RegisterController@register')->name('register');
 Route::post('/post_register', 'Auth\RegisterController@post_register')->name('post_register');
 
 Route::get('/dashboard', 'Main\HomeController@index')->name('home');
+Route::get('/profile', 'Main\ProfilController@index')->name('profile');
 
 //Article
 Route::get('/dashboard/article', 'Main\Admin\ArticleController@index')->name('article');
@@ -56,6 +57,15 @@ Route::get('/dashboard/nutrition_info/show/{id}', 'Main\Admin\NutritionInfoContr
 Route::get('/dashboard/nutrition_info/edit/{id}', 'Main\Admin\NutritionInfoController@edit')->name('nutrition_info.edit');
 Route::post('/dashboard/nutrition_info/update/{id}', 'Main\Admin\NutritionInfoController@update')->name('nutrition_info.update');
 Route::get('/dashboard/nutrition_info/destroy/{id}', 'Main\Admin\NutritionInfoController@destroy')->name('nutrition_info.destroy');
+
+// Care Nutrition
+Route::get('/dashboard/care_nutrition', 'Main\Admin\CareNutritionController@index')->name('care_nutrition');
+Route::get('/dashboard/care_nutrition/create', 'Main\Admin\CareNutritionController@create')->name('care_nutrition.create');
+Route::post('/dashboard/care_nutrition/store', 'Main\Admin\CareNutritionController@store')->name('care_nutrition.store');
+Route::get('/dashboard/care_nutrition/show/{id}', 'Main\Admin\CareNutritionController@show')->name('care_nutrition.show');
+Route::get('/dashboard/care_nutrition/edit/{id}', 'Main\Admin\CareNutritionController@edit')->name('care_nutrition.edit');
+Route::post('/dashboard/care_nutrition/update/{id}', 'Main\Admin\CareNutritionController@update')->name('care_nutrition.update');
+Route::get('/dashboard/care_nutrition/destroy/{id}', 'Main\Admin\CareNutritionController@destroy')->name('care_nutrition.destroy');
 
 Route::get('/article/index', function () {
     return view('/article/index_article');

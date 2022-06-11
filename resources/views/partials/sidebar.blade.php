@@ -13,14 +13,17 @@
       {{-- <a href="{{ route('article') }}" style="display: block">Article</a>
     <a href="{{ route('user') }}" style="display: block">User</a> --}}
       <li class="menu-header">Dashboard</li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a href="{{ route('article') }}" class="nav-link"><i class="fas fa-fire"></i><span>Article</span></a>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <a href="{{ route('stunting_info') }}" class="nav-link"><i class="fas fa-fire"></i><span>Stunting Info</span></a>
       </li>
       <li class="nav-item">
         <a href="{{ route('nutrition_info') }}" class="nav-link"><i class="fas fa-info"></i><span>Nutrition Info</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ route('care_nutrition') }}" class="nav-link"><i class="fas fa-info"></i><span>Care Nutrition</span></a>
       </li>
       <li class="nav-item">
         <a href="/trace/index" class="nav-link"><i class="far fa-square"></i><span>Trace</span></a>
