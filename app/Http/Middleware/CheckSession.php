@@ -19,7 +19,7 @@ class CheckSession
         if(session()->get('token.access_token') !==null){ 
             // dd(session()->get('token.access_token'));
             $client = new Client();
-            $url = "http://127.0.0.1:8000/api/v1/user";
+            $url = getenv('API_URL')."api/v1/user";
             $response = $client->request(
                 'GET',
                 $url,

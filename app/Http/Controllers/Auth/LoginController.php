@@ -15,7 +15,7 @@ class LoginController extends Controller
         // dd("tes");
         if (session()->get('token.access_token') !== null ) {
             $client = new Client();
-            $url = "http://127.0.0.1:8000/api/v1/user";
+            $url = getenv('API_URL')."api/v1/user";
             $response = $client->request(
                 'GET',
                 $url,
@@ -51,7 +51,7 @@ class LoginController extends Controller
         $password = $request->password;
 
         $client = new Client();
-        $url = "http://127.0.0.1:8000/token_authentication/get_token";
+        $url = getenv('API_URL')."token_authentication/get_token";
         $response = $client->request(
             'GET',
             $url,

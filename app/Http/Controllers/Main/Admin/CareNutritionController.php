@@ -20,7 +20,7 @@ class CareNutritionController extends Controller
     public function index()
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url =getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'GET',
             $url,
@@ -63,7 +63,7 @@ class CareNutritionController extends Controller
         $article_tags = implode('|', $request->tags_list);
         $image = base64_encode(file_get_contents($request->file('cover')->path()));
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'POST',
             $url,
@@ -94,7 +94,7 @@ class CareNutritionController extends Controller
     public function show($id)
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'GET',
             $url,
@@ -125,7 +125,7 @@ class CareNutritionController extends Controller
     public function edit($id)
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'GET',
             $url,
@@ -178,7 +178,7 @@ class CareNutritionController extends Controller
             $format = $request->file('cover')->extension();
         }
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'PATCH',
             $url,
@@ -211,7 +211,7 @@ class CareNutritionController extends Controller
     public function destroy($id)
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/article";
+        $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
             'DELETE',
             $url,

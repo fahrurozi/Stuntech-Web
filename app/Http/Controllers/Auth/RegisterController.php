@@ -12,7 +12,7 @@ class RegisterController extends Controller
     public function register(){
         if (session()->get('token.access_token') !== null ) {
             $client = new Client();
-            $url = "http://127.0.0.1:8000/api/v1/user";
+            $url = getenv('API_URL')."api/v1/user";
             $response = $client->request(
                 'GET',
                 $url,
@@ -46,7 +46,7 @@ class RegisterController extends Controller
         $b64_profile_img = "iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAYSURBVChTY/hPJhjViAeMasQD6K3x/38AvsDVRz3BefoAAAAASUVORK5CYII=";
 
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/user";
+        $url = getenv('API_URL')."api/v1/user";
         $response = $client->request(
             'POST',
             $url,

@@ -17,7 +17,7 @@ class UserController extends Controller
     
     public function index(){
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/v1/profile_admin";
+        $url = getenv('API_URL')."api/v1/profile_admin";
         $response = $client->request(
             'GET',
             $url,
