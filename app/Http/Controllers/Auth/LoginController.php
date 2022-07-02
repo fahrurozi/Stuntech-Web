@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -73,6 +74,11 @@ class LoginController extends Controller
         $request->session()->put('userData.username', $username);
 
         return redirect()->route('home');
+    }
+
+    public function logout(){
+        Session::flush();
+        return redirect()->route('login');
     }
 
 }

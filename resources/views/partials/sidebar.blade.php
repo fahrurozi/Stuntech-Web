@@ -28,13 +28,13 @@
       <li class="nav-item">
         <a href="{{ route('maps') }}" class="nav-link"><i class="fas fa-th"></i> <span>Maps</span></a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a href="/trace/index" class="nav-link"><i class="far fa-square"></i><span>Trace</span></a>
       </li>
       <li class="nav-item">
         <a href="#" class="nav-link"><i class="fa-solid fa-bell"></i> <span>Reminder</span></a>
       </li>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <a href="{{ route('user') }}" class="nav-link"><i class="far fa-user"></i><span>User</span></a>
       </li>

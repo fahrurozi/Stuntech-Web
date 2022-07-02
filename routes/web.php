@@ -32,6 +32,8 @@ Route::post('/post_login', 'Auth\LoginController@post_login')->name('post_login'
 Route::get('/register', 'Auth\RegisterController@register')->name('register');
 Route::post('/post_register', 'Auth\RegisterController@post_register')->name('post_register');
 
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Route::get('/dashboard', 'Main\HomeController@index')->name('home');
 Route::get('/profile', 'Main\ProfilController@index')->name('profile');
 
@@ -71,6 +73,7 @@ Route::get('/dashboard/care_nutrition/destroy/{id}', 'Main\Admin\CareNutritionCo
 Route::get('/dashboard/maps', 'Main\Admin\MapsController@index')->name('maps');
 Route::get('/dashboard/maps/add', 'Main\Admin\MapsController@create')->name('maps.create');
 Route::get('/dashboard/maps/store/{place_id}', 'Main\Admin\MapsController@store')->name('maps.store');
+Route::get('/dashboard/maps/destroy/{place_id}', 'Main\Admin\MapsController@destroy')->name('maps.destroy');
 
 Route::get('/article/index', function () {
     return view('/article/index_article');

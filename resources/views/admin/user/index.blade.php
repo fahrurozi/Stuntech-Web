@@ -14,15 +14,15 @@
         <div class="section-table">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{route('stunting_info.create')}}" class="float-right btn btn-primary">New Article</a>
+                    {{-- <a href="{{route('stunting_info.create')}}" class="float-right btn btn-primary">New Article</a> --}}
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <td>name</td>
-                                    <td>email</td>
+                                    <th>name</th>
+                                    <th>email</th>
                                 </tr>
                             </thead>
                             <tbody>

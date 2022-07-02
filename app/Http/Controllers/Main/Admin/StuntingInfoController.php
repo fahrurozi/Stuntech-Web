@@ -22,7 +22,7 @@ class StuntingInfoController extends Controller
         $client = new Client();
         $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
-            'GET',
+            'POST',
             $url,
             [
                 'headers' => [
@@ -100,7 +100,7 @@ class StuntingInfoController extends Controller
         $client = new Client();
         $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
-            'GET',
+            'POST',
             $url,
             [
                 'headers' => [
@@ -132,7 +132,7 @@ class StuntingInfoController extends Controller
         $client = new Client();
         $url = getenv('API_URL')."api/v1/article";
         $response = $client->request(
-            'GET',
+            'POST',
             $url,
             [
                 'headers' => [
