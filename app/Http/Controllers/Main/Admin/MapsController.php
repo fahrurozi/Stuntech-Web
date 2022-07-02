@@ -16,7 +16,7 @@ class MapsController extends Controller
         $client = new Client();
         $url = getenv('API_URL') . "api/v1/maps";
         $response = $client->request(
-            'GET',
+            'POST',
             $url,
             [
                 'headers' => [
@@ -56,7 +56,7 @@ class MapsController extends Controller
                 ],
                 'json' => [
                     'get_type' => "unregistered",
-                    'place_query' => "Rumah Sakit",
+                    'place_query' => "Puskesmas",
                 ]
             ]
         );
@@ -132,6 +132,27 @@ class MapsController extends Controller
                 );
             }
         }
+        return redirect()->route('maps');
+    }
+
+    public function destroy($place_id){
+        $client = new Client();
+        $url = getenv('API_URL')."api/v1/maps_admin";
+        $response = $client->request(
+            'DELETE',
+            $url,
+            [
+                'headers' => [
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                    'token' => session()->get('token.access_token')
+                ],
+                'json' => [
+                    'gmap_place_ids' => [$place_id],
+                ]
+            ]
+        );
+
         return redirect()->route('maps');
     }
 

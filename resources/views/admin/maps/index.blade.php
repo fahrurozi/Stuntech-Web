@@ -23,8 +23,8 @@
                                 <th>Name</th>
                                 <th>Latitude</th>
                                 <th>Longitude</th>
-                                <th>Gmaps</th>
-                                {{-- <th>Action</th> --}}
+                                {{-- <th>Gmaps</th> --}}
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +34,11 @@
                                 <td>{{$place->place_detail->name}}</td>
                                 <td>{{$place->place_detail->geometry->location->lat}}</td>
                                 <td>{{$place->place_detail->geometry->location->lng}}</td>
-                                <td><a class="btn btn-primary" href="{{$place->place_detail->url}}" role="button" target="_blank">Open Map</a></td>
+                                {{-- <td></td> --}}
+                                <td>
+                                    <a class="btn btn-primary" href="{{$place->place_detail->url}}" role="button" target="_blank">Open Map</a>
+                                    <a href="{{ route('maps.destroy', $place->place_detail->place_id) }}"><button type="button" class="btn btn-danger" onClick="return confirm('Yakin mau dihapus?')"><i class="far fa-trash-alt"></i></button></a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
