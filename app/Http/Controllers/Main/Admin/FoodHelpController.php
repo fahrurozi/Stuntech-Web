@@ -7,9 +7,9 @@ use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
-const ROOT_NUTRITION_INFO_PAGE = 'admin.nutrition_info.';
+const ROOT_FOOD_HELP_PAGE = 'admin.food_help.';
 
-class NutritionInfoController extends Controller
+class FoodHelpController extends Controller
 {
     //
     public function __construct()
@@ -17,10 +17,10 @@ class NutritionInfoController extends Controller
         $this->middleware('CheckSession');
     }
 
-    public function index(){
-        // dd(getenv('API_URL'));
+    public function index()
+    {
         $client = new Client();
-        $url = getenv('API_URL')."api/v1/article";
+        $url = getenv('API_URL') . "api/v1/article";
         $response = $client->request(
             'POST',
             $url,
@@ -32,16 +32,16 @@ class NutritionInfoController extends Controller
                 ],
                 'json' => [
                     'get_articles' => "filter_articles",
-                    'article_type' => "nutrition_info"
+                    'article_type' => "food_help"
                 ]
             ]
         );
-        // dd(session()->get('token.access_token'));
+        
         $responseBody = json_decode($response->getBody());
-        $articles = $responseBody->articles;
+        $locations = $responseBody->articles;
 
         $data = [
-            'articles' => $articles,
+            'locations' => $locations,
         ];
 
         return $this->__view('index', $data);
@@ -54,10 +54,10 @@ class NutritionInfoController extends Controller
     public function store(Request $request){
         $title = $request->title;
         $date = Carbon::now()->format('d/m/Y');
-        $article_content = "";
-        $article_type = "nutrition_info";
-        $article_sub_type = "";
-        $article_tags = implode('|',$request->tags_list);
+        $article_content = $request->article_content;
+        $article_type = "food_help";
+        $article_sub_type = $request->article_sub_type;
+        $article_tags = "";
         $image = base64_encode(file_get_contents($request->file('cover')->path()));
         $client = new Client();
         $url = getenv('API_URL')."api/v1/article";
@@ -85,7 +85,7 @@ class NutritionInfoController extends Controller
                 ]
             ]
         );
-        return redirect()->route('nutrition_info');
+        return redirect()->route('food_help');
     }
 
     public function show($id)
@@ -110,10 +110,10 @@ class NutritionInfoController extends Controller
 
         $responseBody = json_decode($response->getBody());
         $article = $responseBody->article;
-        // $article_content = file_get_contents(getenv('API_URL')."static/".$article->article_file);
+        $article_content = file_get_contents(getenv('API_URL')."static/".$article->article_file);
         $data = [
             'article' => $article,
-            // 'article_content' => $article_content,
+            'article_content' => $article_content,
         ];
 
         return $this->__view('show', $data);
@@ -144,10 +144,12 @@ class NutritionInfoController extends Controller
         
         // $article_content = file_get_contents(getenv('API_URL')."static/".$article->article_file);
         $article_tags = explode("|",$article->article_tags);
+        $article_content = file_get_contents(getenv('API_URL')."static/".$article->article_file);
         // dd();
         $data = [
             'article' => $article,
             'article_tags' => $article_tags,
+            'article_content' => $article_content,
             // 'article_content' => $article_content,
         ];
 
@@ -157,10 +159,10 @@ class NutritionInfoController extends Controller
     public function update(Request $request, $id){
         $title = $request->title;
         $date = Carbon::now()->format('d/m/Y');
-        $article_type = "nutrition_info";
-        $article_content = "";
-        $article_sub_type = "";
-        $article_tags = implode('|',$request->tags_list);
+        $article_content = $request->article_content;
+        $article_type = "food_help";
+        $article_sub_type = $request->article_sub_type;
+        $article_tags = "";
         $article_cover_file = $request->article_cover_file;
         
         if($request->file('cover') == null){
@@ -200,7 +202,7 @@ class NutritionInfoController extends Controller
             ]
         );
 
-        return redirect()->route('nutrition_info.show', $id);
+        return redirect()->route('food_help.show', $id);
     }
 
     public function destroy($id){
@@ -221,16 +223,16 @@ class NutritionInfoController extends Controller
             ]
         );
 
-        return redirect()->route('nutrition_info');
+        return redirect()->route('food_help');
     }
 
     public function __view($view, $data = null)
     {
         debug($data);
         if ($data) {
-            return view(ROOT_NUTRITION_INFO_PAGE . $view, $data);
+            return view(ROOT_FOOD_HELP_PAGE . $view, $data);
         } else {
-            return view(ROOT_NUTRITION_INFO_PAGE . $view);
+            return view(ROOT_FOOD_HELP_PAGE . $view);
         }
     }
 }

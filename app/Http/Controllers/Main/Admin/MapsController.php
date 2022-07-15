@@ -85,7 +85,7 @@ class MapsController extends Controller
                 ],
                 'json' => [
                     'get_type' => "unregistered",
-                    'place_query' => "Rumah Sakit",
+                    'place_query' => "Puskesmas",
                 ]
             ]
         );

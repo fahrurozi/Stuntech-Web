@@ -26,6 +26,9 @@
         <a href="{{ route('care_nutrition') }}" class="nav-link"><i class="fas fa-info"></i><span>Care Nutrition</span></a>
       </li>
       <li class="nav-item">
+        <a href="{{ route('food_help') }}" class="nav-link"><i class="fas fa-info"></i><span>Food Help</span></a>
+      </li>
+      <li class="nav-item">
         <a href="{{ route('maps') }}" class="nav-link"><i class="fas fa-th"></i> <span>Maps</span></a>
       </li>
       {{-- <li class="nav-item">

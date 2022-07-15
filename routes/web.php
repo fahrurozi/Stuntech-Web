@@ -69,6 +69,15 @@ Route::get('/dashboard/care_nutrition/edit/{id}', 'Main\Admin\CareNutritionContr
 Route::post('/dashboard/care_nutrition/update/{id}', 'Main\Admin\CareNutritionController@update')->name('care_nutrition.update');
 Route::get('/dashboard/care_nutrition/destroy/{id}', 'Main\Admin\CareNutritionController@destroy')->name('care_nutrition.destroy');
 
+// Food Help
+Route::get('/dashboard/food_help', 'Main\Admin\FoodHelpController@index')->name('food_help');
+Route::get('/dashboard/food_help/create', 'Main\Admin\FoodHelpController@create')->name('food_help.create');
+Route::post('/dashboard/food_help/create', 'Main\Admin\FoodHelpController@store')->name('food_help.store');
+Route::get('/dashboard/food_help/show/{id}', 'Main\Admin\FoodHelpController@show')->name('food_help.show');
+Route::get('/dashboard/food_help/edit/{id}', 'Main\Admin\FoodHelpController@edit')->name('food_help.edit');
+Route::post('/dashboard/food_help/update/{id}', 'Main\Admin\FoodHelpController@update')->name('food_help.update');
+Route::get('/dashboard/food_help/destroy/{id}', 'Main\Admin\FoodHelpController@destroy')->name('food_help.destroy');
+
 // Maps
 Route::get('/dashboard/maps', 'Main\Admin\MapsController@index')->name('maps');
 Route::get('/dashboard/maps/add', 'Main\Admin\MapsController@create')->name('maps.create');
