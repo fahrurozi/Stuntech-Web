@@ -72,11 +72,20 @@ Route::get('/dashboard/care_nutrition/destroy/{id}', 'Main\Admin\CareNutritionCo
 // Food Help
 Route::get('/dashboard/food_help', 'Main\Admin\FoodHelpController@index')->name('food_help');
 Route::get('/dashboard/food_help/create', 'Main\Admin\FoodHelpController@create')->name('food_help.create');
-Route::post('/dashboard/food_help/create', 'Main\Admin\FoodHelpController@store')->name('food_help.store');
+Route::post('/dashboard/food_help/store', 'Main\Admin\FoodHelpController@store')->name('food_help.store');
 Route::get('/dashboard/food_help/show/{id}', 'Main\Admin\FoodHelpController@show')->name('food_help.show');
 Route::get('/dashboard/food_help/edit/{id}', 'Main\Admin\FoodHelpController@edit')->name('food_help.edit');
 Route::post('/dashboard/food_help/update/{id}', 'Main\Admin\FoodHelpController@update')->name('food_help.update');
 Route::get('/dashboard/food_help/destroy/{id}', 'Main\Admin\FoodHelpController@destroy')->name('food_help.destroy');
+
+// Hello Stunting
+Route::get('/dashboard/hello_stunting', 'Main\Admin\HelloStuntingController@index')->name('hello_stunting');
+Route::get('/dashboard/hello_stunting/create', 'Main\Admin\HelloStuntingController@create')->name('hello_stunting.create');
+Route::post('/dashboard/hello_stunting/store', 'Main\Admin\HelloStuntingController@store')->name('hello_stunting.store');
+Route::get('/dashboard/hello_stunting/show/{id}', 'Main\Admin\HelloStuntingController@show')->name('hello_stunting.show');
+Route::get('/dashboard/hello_stunting/edit/{id}', 'Main\Admin\HelloStuntingController@edit')->name('hello_stunting.edit');
+Route::post('/dashboard/hello_stunting/update/{id}', 'Main\Admin\HelloStuntingController@update')->name('hello_stunting.update');
+Route::get('/dashboard/hello_stunting/destroy/{id}', 'Main\Admin\HelloStuntingController@destroy')->name('hello_stunting.destroy');
 
 // Maps
 Route::get('/dashboard/maps', 'Main\Admin\MapsController@index')->name('maps');

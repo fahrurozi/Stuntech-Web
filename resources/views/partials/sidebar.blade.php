@@ -20,13 +20,16 @@
         <a href="{{ route('stunting_info') }}" class="nav-link"><i class="fas fa-fire"></i><span>Stunting Info</span></a>
       </li>
       <li class="nav-item">
-        <a href="{{ route('nutrition_info') }}" class="nav-link"><i class="fas fa-info"></i><span>Nutrition Info</span></a>
+        <a href="{{ route('nutrition_info') }}" class="nav-link"><i class="fas fa-carrot"></i><span>Nutrition Info</span></a>
       </li>
       <li class="nav-item">
-        <a href="{{ route('care_nutrition') }}" class="nav-link"><i class="fas fa-info"></i><span>Care Nutrition</span></a>
+        <a href="{{ route('care_nutrition') }}" class="nav-link"><i class="fas fa-fish-fins"></i><span>Care Nutrition</span></a>
       </li>
       <li class="nav-item">
-        <a href="{{ route('food_help') }}" class="nav-link"><i class="fas fa-info"></i><span>Food Help</span></a>
+        <a href="{{ route('food_help') }}" class="nav-link"><i class="fas fa-cookie"></i><span>Food Help</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="{{route('hello_stunting')}}" class="nav-link"><i class="fas fa-headset"></i> <span>Hello Stunting</span></a>
       </li>
       <li class="nav-item">
         <a href="{{ route('maps') }}" class="nav-link"><i class="fas fa-th"></i> <span>Maps</span></a>

@@ -3,7 +3,7 @@
 @section('content')
 <html>
     <head>
-        <title>Food Help Details</title>
+        <title>Hello Stunting Details</title>
     </head>
     <body>
         <section class ="section">
@@ -16,8 +16,12 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th class = "col-md-3">Place Name</th>
+                                <th class = "col-md-3">Nama</th>
                                 <td class = "col-md-9">{{$article->title}}</td>
+                            </tr>
+                            <tr>
+                                <th class = "col-md-3">Posisi</th>
+                                <td class = "col-md-9">{{$article->article_tags}}</td>
                             </tr>
                             <tr>
                                 <th class = "col-md-3">Date</th>
@@ -28,22 +32,22 @@
                                 {{-- <td class = "col-md-9"><iframe src="http://127.0.0.1:8000/static/{{$article->article_file}}" height="200" width="300" title="Iframe Example"></iframe></td> --}}
                                 <td class = "col-md-9">{!! $article_content !!}</td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <th class = "col-md-3">Article Types</th>
                                 <td class = "col-md-9">{{$article->article_type}}</td>
-                            </tr>
+                            </tr> --}}
                             <tr>
-                                <th class = "col-md-3">Address</th>
+                                <th class = "col-md-3">Tempat Praktik</th>
                                 <td class = "col-md-9">{{$article->article_sub_type}}</td>
                             </tr>
                             <tr>
-                                <th class = "col-md-3">Cover</th>
+                                <th class = "col-md-3">Photo</th>
                                 <td class = "col-md-9"><img style="height: 200px" src="{{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
                             </tr>
                             <tr>
                                 <th class = "col-md-3">Action</th>
                                 <td class = "col-md-9">
-                                <a href="{{ route('food_help') }}"><button type="button" class="btn btn-primary">Back</button></a>
+                                <a href="{{ route('hello_stunting') }}"><button type="button" class="btn btn-primary">Back</button></a>
                                 </td>
                             </tr>
                         </thead>
