@@ -125,6 +125,7 @@ class MapsController extends Controller
                                     'gmap_place_id' => $place->place_id,
                                     'img_url' => $static_img,
                                     'gmap_url' => "",
+                                    'avg_rating' => 5
                                 ]
                             ),
                         ]
