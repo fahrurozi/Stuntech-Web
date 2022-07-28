@@ -31,7 +31,7 @@ class LoginController extends Controller
             
             $responseBody = json_decode($response->getBody());
 
-            if ($responseBody->profile !== null) {
+            if (isset($responseBody->profile) && $responseBody->profile !== null) {
                 return redirect()->route('home');
             } else {
                 return view('auth.login');
