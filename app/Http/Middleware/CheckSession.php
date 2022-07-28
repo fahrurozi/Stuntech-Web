@@ -37,7 +37,7 @@ class CheckSession
             $responseBody = json_decode($response->getBody());
             // dd($responseBody->profile !== null);
 
-            if($responseBody->profile !== null){
+            if(isset($responseBody->profile) && $responseBody->profile !== null){
                 return $next($request);
             }else{
                 return redirect()->route('login');
