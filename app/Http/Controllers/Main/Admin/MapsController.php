@@ -56,7 +56,7 @@ class MapsController extends Controller
                 ],
                 'json' => [
                     'get_type' => "unregistered",
-                    'place_query' => "Puskesmas",
+                    'place_query' => "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta",
                 ]
             ]
         );
@@ -85,7 +85,7 @@ class MapsController extends Controller
                 ],
                 'json' => [
                     'get_type' => "unregistered",
-                    'place_query' => "Puskesmas",
+                    'place_query' => "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta",
                 ]
             ]
         );
