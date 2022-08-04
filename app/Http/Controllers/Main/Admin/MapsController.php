@@ -13,20 +13,19 @@ class MapsController extends Controller
     //
     public function index()
     {
+        $query = '{"get_type": "registered_filter_users", "location": "", "keyword": ""}';
+
         $client = new Client();
-        $url = getenv('API_URL') . "api/v1/maps";
+        $url = getenv('API_URL') . "api/v1/maps"."?json_body=".$query;
+
         $response = $client->request(
-            'POST',
+            'GET',
             $url,
             [
                 'headers' => [
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
                     'token' => session()->get('token.access_token')
-                ],
-                'json' => [
-                    'location' => "",
-                    'keyword' => "",
                 ]
             ]
         );
