@@ -42,8 +42,9 @@ class MapsController extends Controller
 
     public function create()
     {
+        $query = '{"get_type": "unregistered","place_query": "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta"}';
         $client = new Client();
-        $url = getenv('API_URL') . "api/v1/maps_admin";
+        $url = getenv('API_URL') . "api/v1/maps_admin?json_body=".$query;
         $response = $client->request(
             'GET',
             $url,
@@ -52,10 +53,6 @@ class MapsController extends Controller
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
                     'token' => session()->get('token.access_token')
-                ],
-                'json' => [
-                    'get_type' => "unregistered",
-                    'place_query' => "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta",
                 ]
             ]
         );
@@ -71,8 +68,9 @@ class MapsController extends Controller
 
     public function store($place_id)
     {
+        $query = '{"get_type": "unregistered","place_query": "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta"}';
         $client = new Client();
-        $url = getenv('API_URL') . "api/v1/maps_admin";
+        $url = getenv('API_URL') . "api/v1/maps_admin?json_body=".$query;
         $response = $client->request(
             'GET',
             $url,
@@ -81,10 +79,6 @@ class MapsController extends Controller
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
                     'token' => session()->get('token.access_token')
-                ],
-                'json' => [
-                    'get_type' => "unregistered",
-                    'place_query' => "Rumah Sakit in DIYogyakarta OR Puskesmas in DIYogyakarta",
                 ]
             ]
         );
@@ -122,9 +116,9 @@ class MapsController extends Controller
                                     'location_lng' => $place->geometry->location->lng,
                                     'name' => $place->name,
                                     'gmap_place_id' => $place->place_id,
-                                    'img_url' => $static_img,
+                                    'img_url' => "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyAN6a7kSklwRHnNojU72nDnCfhYGhrATh0&photo_reference=".$place->photos[0]->photo_reference,
                                     'gmap_url' => "",
-                                    'avg_rating' => 5
+                                    'avg_rating' => 0
                                 ]
                             ),
                         ]

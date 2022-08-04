@@ -93,6 +93,12 @@ Route::get('/dashboard/maps/add', 'Main\Admin\MapsController@create')->name('map
 Route::get('/dashboard/maps/store/{place_id}', 'Main\Admin\MapsController@store')->name('maps.store');
 Route::get('/dashboard/maps/destroy/{place_id}', 'Main\Admin\MapsController@destroy')->name('maps.destroy');
 
+// Review
+Route::get('/dashboard/review', 'Main\Admin\ReviewController@index')->name('review');
+Route::get('/dashboard/review/show/{id}', 'Main\Admin\ReviewController@show')->name('review.show');
+Route::get('/dashboard/review/destroy/{id}', 'Main\Admin\ReviewController@destroy')->name('review.destroy');
+
+
 Route::get('/article/index', function () {
     return view('/article/index_article');
 });
