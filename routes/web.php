@@ -98,6 +98,13 @@ Route::get('/dashboard/review', 'Main\Admin\ReviewController@index')->name('revi
 Route::get('/dashboard/review/show/{id}', 'Main\Admin\ReviewController@show')->name('review.show');
 Route::get('/dashboard/review/destroy/{id}', 'Main\Admin\ReviewController@destroy')->name('review.destroy');
 
+// Fun Stunting
+Route::get('/dashboard/fun_stunting', 'Main\Admin\FunController@index')->name('fun_stunting');
+Route::get('/dashboard/fun_stunting/level/{id}', 'Main\Admin\FunController@list')->name('fun_stunting.list');
+Route::get('/dashboard/fun_stunting/level/{id}/create', 'Main\Admin\FunController@create')->name('fun_stunting.create');
+Route::post('/dashboard/fun_stunting/level/{id}/store', 'Main\Admin\FunController@store')->name('fun_stunting.store');
+Route::get('/dashboard/fun_stunting/destroy/{id}', 'Main\Admin\FunController@destroy')->name('fun_stunting.destroy');
+
 
 Route::get('/article/index', function () {
     return view('/article/index_article');

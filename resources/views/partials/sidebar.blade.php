@@ -37,6 +37,9 @@
       <li class="nav-item">
         <a href="{{ route('review') }}" class="nav-link"><i class="fas fa-star"></i> <span>Review</span></a>
       </li>
+      <li class="nav-item">
+        <a href="{{ route('fun_stunting') }}" class="nav-link"><i class="fas fa-gamepad"></i> <span>Fun Stunting</span></a>
+      </li>
       {{-- <li class="nav-item">
         <a href="/trace/index" class="nav-link"><i class="far fa-square"></i><span>Trace</span></a>
       </li>
