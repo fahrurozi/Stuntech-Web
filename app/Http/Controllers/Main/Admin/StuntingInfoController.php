@@ -194,6 +194,7 @@ class StuntingInfoController extends Controller
                     'title' => $title,
                     'date' => $date,
                     'article_content' => $article_content,
+                    'article_items' => "",
                     'article_type' => $article_type,
                     "article_sub_type" => "",
                     "article_tags" => "",
