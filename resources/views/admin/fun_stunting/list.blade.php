@@ -12,7 +12,7 @@
         <div class="section-table">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{ (count($questions)<2?route('fun_stunting.create', $level):"") }}" class="float-right btn btn-primary" aria-disabled="{{(count($questions)>=3)?"true":"false"}}">New Question</a>
+                    <a href="{{ (count($questions)<=2?route('fun_stunting.create', $level):"") }}" class="float-right btn btn-primary" aria-disabled="{{(count($questions)>=3)?"true":"false"}}">New Question</a>
                 </div>
                 <div class="card-body">    
                     <div class="table-responsive">
