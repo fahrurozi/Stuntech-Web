@@ -17,6 +17,9 @@
         <a href="{{ route('article') }}" class="nav-link"><i class="fas fa-fire"></i><span>Article</span></a>
       </li> --}}
       <li class="nav-item">
+        <a href="{{ route('home') }}" class="nav-link"><i class="fas fa-home"></i><span>Dashboard</span></a>
+      </li>
+      <li class="nav-item">
         <a href="{{ route('stunting_info') }}" class="nav-link"><i class="fas fa-fire"></i><span>Stunting Info</span></a>
       </li>
       <li class="nav-item">

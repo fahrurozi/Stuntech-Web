@@ -1,14 +1,293 @@
+<?php 
+    $test = $pie;
+?>
+
 @extends('layouts.main')
 @section('content')
 <section class="section">
     <div class="section-header">
         <h1>Dashboard</h1>
-    </div> 
-</section>
-@endsection   
+    </div>
+    <div class="section-table">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Grafik Trends Stunting</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="stuntingChart" width="400" height="130"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Grafik Tahun Pertama</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart1Year" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Grafik Tahun Kedua</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart2Year" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Grafik Tahun Ketiga</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart3Year" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Grafik Tahun Keempat</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart4Year" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="pie" width="400" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-{{-- <h1>Dashboard</h1>
-<div >
-    <a href="{{ route('article') }}" style="display: block">Article</a>
-    <a href="{{ route('user') }}" style="display: block">User</a>
-</div> --}}
+</section>
+@endsection
+
+@section('scripts')
+<script src={{ asset('/assets/js/chartJs/chart.js') }}></script>
+<script type="text/javascript">
+    const stuntingChartCtx = document.getElementById('stuntingChart');
+    const stuntingChart = new Chart(stuntingChartCtx, {
+        type: 'line',
+        data: {
+            labels: ['Lahir', '1 Bulan', '2 Bulan', '3 Bulan', '4 Bulan', '5 Bulan', '6 Bulan', '7 Bulan', '8 Bulan', '9 Bulan', '10 Bulan', '11 Bulan', '1 Tahun','Lahir', '1 Bulan', '2 Bulan', '3 Bulan', '4 Bulan', '5 Bulan', '6 Bulan', '7 Bulan', '8 Bulan', '9 Bulan', '10 Bulan', '11 Bulan', '1 Tahun'],
+            datasets: [{
+                label: 'Grafik Jumlah Stunting Tahun Pertama',  
+                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    const barChart1YearCtx = document.getElementById('barChart1Year');
+    const barChart1YearChart = new Chart(barChart1YearCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Lahir', '1 Bulan', '2 Bulan', '3 Bulan', '4 Bulan', '5 Bulan', '6 Bulan', '7 Bulan', '8 Bulan', '9 Bulan', '10 Bulan', '11 Bulan', '1 Tahun'],
+            datasets: [{
+                label: 'Grafik Jumlah Stunting Tahun Pertama',  
+                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const barChart2YearCtx = document.getElementById('barChart2Year');
+    const barChart2YearChart = new Chart(barChart2YearCtx, {
+        type: 'bar',
+        data: {
+            labels: ['1 Tahun 1 Bulan', '1 Tahun 2 Bulan', '1 Tahun 3 Bulan', '1 Tahun 4 Bulan', '1 Tahun 5 Bulan', '1 Tahun 6 Bulan', '1 Tahun 7 Bulan', '1 Tahun 8 Bulan', '1 Tahun 9 Bulan', '1 Tahun 10 Bulan', '1 Tahun 11 Bulan', '2 Tahun'],
+            datasets: [{
+                label: 'Grafik Jumlah Stunting Tahun Pertama',  
+                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const barChart3YearCtx = document.getElementById('barChart3Year');
+    const barChart3earChart = new Chart(barChart3YearCtx, {
+        type: 'bar',
+        data: {
+            labels: ['2 Tahun 1 Bulan', '2 Tahun 2 Bulan', '2 Tahun 3 Bulan', '2 Tahun 4 Bulan', '2 Tahun 5 Bulan', '2 Tahun 6 Bulan', '2 Tahun 7 Bulan', '2 Tahun 8 Bulan', '2 Tahun 9 Bulan', '2 Tahun 10 Bulan', '2 Tahun 11 Bulan', '3 Tahun'],
+            datasets: [{
+                label: 'Grafik Jumlah Stunting Tahun Pertama',  
+                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const barChart4YearCtx = document.getElementById('barChart4Year');
+    const barChart4YearChart = new Chart(barChart4YearCtx, {
+        type: 'bar',
+        data: {
+            labels: ['3 Tahun 1 Bulan', '3 Tahun 2 Bulan', '3 Tahun 3 Bulan', '3 Tahun 4 Bulan', '3 Tahun 5 Bulan', '3 Tahun 6 Bulan', '3 Tahun 7 Bulan', '3 Tahun 8 Bulan', '3 Tahun 9 Bulan', '3 Tahun 10 Bulan', '3 Tahun 11 Bulan', '4 Tahun'],
+            datasets: [{
+                label: 'Grafik Jumlah Stunting Tahun Pertama',  
+                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    var dataPie = {!! json_encode($pie) !!};
+    var dataPieArray = Object.values(dataPie["dataPie"]);
+    console.log(dataPie["dataPie"]);
+
+        const pieCtx = document.getElementById('pie');
+        const pieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Sangat Pendek', 'Pendek', 'Normal', 'Tinggi'],
+            datasets: [{
+                label: '# of Votes',
+                data: dataPieArray,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        },
+        plugins: {
+            datalabels: {
+                formatter: (value, pieCtx) => {
+                    let sum = 0;
+                    let dataArr = pieCtx.chart.data.datasets[0].data;
+                    dataArr.map(data => {
+                    sum += data;
+                    });
+                    let percentage = (value*100 / sum).toFixed(2)+"%";
+                    // return percentage;
+                    return "halo";
+                },
+                color: '#fff',
+            }
+        }
+    });
+</script>
+@endsection
