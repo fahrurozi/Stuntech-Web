@@ -61,6 +61,22 @@ class HomeController extends Controller
             $tmp = $value/$totaldataPie*100;
             $dataPie[$key] = round($tmp, 2);
         }
+
+        $dataGrowthAgeMonthStunting = get_object_vars($responseBody->growth_agemonth_stunting);
+        foreach($dataGrowthAgeMonthStunting as $key=> $value){
+            $dataGrowthAgeMonthStunting[$key] = get_object_vars($value);
+            for($i = 0; $i<=59; $i++){
+                if(!isset($dataGrowthAgeMonthStunting[$key][$i])){
+                    $dataGrowthAgeMonthStunting[$key][$i] = 0;
+                }
+            }
+        }
+        
+
+        $growthAgeMonthStunting = [
+            'dataGrowthAgeMonthStunting' => $dataGrowthAgeMonthStunting,
+        ];
+
         $pie = [
             'total' => $totaldataPie,
             'dataPie' => get_object_vars($responseBody->growth_group_count),
@@ -70,6 +86,7 @@ class HomeController extends Controller
         $data = [
             'data' => $responseBody,
             'pie' => $pie,
+            'growthAgeMonthStunting' => $growthAgeMonthStunting,
         ];
         
         return $this->__view('index', $data);

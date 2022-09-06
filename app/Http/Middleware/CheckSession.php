@@ -17,7 +17,6 @@ class CheckSession
     public function handle($request, Closure $next)
     {
         if(session()->get('token.access_token') !==null){ 
-            // dd(session()->get('token.access_token'));
             $client = new Client();
             $url = getenv('API_URL')."api/v1/user";
             $response = $client->request(
@@ -32,11 +31,8 @@ class CheckSession
                 ]
             );
             $statuscode = $response->getStatusCode();
-            // dd($statuscode);
             
             $responseBody = json_decode($response->getBody());
-            // dd($responseBody->profile !== null);
-
             if(isset($responseBody->profile) && $responseBody->profile !== null){
                 return $next($request);
             }else{
@@ -45,6 +41,5 @@ class CheckSession
         }else{
             return redirect()->route('login');
         }
-        // return $next($request);
     }
 }

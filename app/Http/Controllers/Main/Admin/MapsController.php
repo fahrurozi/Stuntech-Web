@@ -82,10 +82,8 @@ class MapsController extends Controller
                 ]
             ]
         );
-        // dd(session()->get('token.access_token'));
         $responseBody = json_decode($response->getBody());
         $all_places = $responseBody->all_places;
-
 
         foreach ($all_places as $place) {
             if ($place->place_id == $place_id) {
