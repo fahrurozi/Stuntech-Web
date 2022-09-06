@@ -20,17 +20,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h6>Grafik Tahun Pertama</h6>
+                        <h6>Data Stunting</h6>
                     </div>
                     <div class="card-body">
-                        <canvas id="barChart1Year" width="400" height="200"></canvas>
+                        <canvas id="barChart1Year" width="400" height="150"></canvas>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <h6>Grafik Tahun Kedua</h6>
@@ -59,7 +59,7 @@
                         <canvas id="barChart4Year" width="400" height="200"></canvas>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -120,15 +120,15 @@
                 // data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10,12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5],
                 data : dataLineChartArrayNormal,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
+                    // 'rgba(255, 99, 132, 0.2)',
+                    // 'rgba(54, 162, 235, 0.2)',
+                    // 'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
+                    // 'rgba(255, 99, 132, 1)',
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                 ],
                 borderWidth: 1,
@@ -139,16 +139,16 @@
                 // data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10,12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5],
                 data : dataLineChartArrayTinggi,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
+                    // 'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
+                    // 'rgba(255, 206, 86, 0.2)',
+                    // 'rgba(75, 192, 192, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
+                    // 'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
                 ],
                 borderWidth: 1,
                 yAxisID: 'y',
@@ -158,16 +158,16 @@
                 // data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10,12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 3, 5, 2, 3, 4, 5],
                 data : dataLineChartArrayPendek,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
+                    // 'rgba(255, 99, 132, 0.2)',
+                    // 'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
+                    // 'rgba(75, 192, 192, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 99, 132, 1)',
+                    // 'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
+                    // 'rgba(75, 192, 192, 1)',
                 ],
                 borderWidth: 1,
                 yAxisID: 'y',
@@ -178,15 +178,15 @@
                 data : dataLineChartArraySangatPendek,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
+                    // 'rgba(54, 162, 235, 0.2)',
+                    // 'rgba(255, 206, 86, 0.2)',
+                    // 'rgba(75, 192, 192, 0.2)',
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
                 ],
                 borderWidth: 1,
                 yAxisID: 'y',
@@ -207,130 +207,170 @@
     const barChart1YearChart = new Chart(barChart1YearCtx, {
         type: 'bar',
         data: {
-            labels: ['Lahir', '1 Bulan', '2 Bulan', '3 Bulan', '4 Bulan', '5 Bulan', '6 Bulan', '7 Bulan', '8 Bulan', '9 Bulan', '10 Bulan', '11 Bulan', '1 Tahun'],
-            datasets: [{
-                label: 'Grafik Jumlah Stunting Tahun Pertama',  
-                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            labels: ['Lahir', '1 Bulan', '2 Bulan', '3 Bulan', '4 Bulan', '5 Bulan', '6 Bulan', '7 Bulan', '8 Bulan', '9 Bulan', '10 Bulan', '11 Bulan', '1 Tahun', 
+                    '1 Tahun 1 Bulan', '1 Tahun 2 Bulan', '1 Tahun 3 Bulan', '1 Tahun 4 Bulan', '1 Tahun 5 Bulan', '1 Tahun 6 Bulan', '1 Tahun 7 Bulan', '1 Tahun 8 Bulan', '1 Tahun 9 Bulan', '1 Tahun 10 Bulan', '1 Tahun 11 Bulan', '2 Tahun',
+                    '2 Tahun 1 Bulan', '2 Tahun 2 Bulan', '2 Tahun 3 Bulan', '2 Tahun 4 Bulan', '2 Tahun 5 Bulan', '2 Tahun 6 Bulan', '2 Tahun 7 Bulan', '2 Tahun 8 Bulan', '2 Tahun 9 Bulan', '2 Tahun 10 Bulan', '2 Tahun 11 Bulan', '3 Tahun',
+                    '3 Tahun Bulan', '3 Tahun 2 Bulan', '3 Tahun 3 Bulan', '3 Tahun 4 Bulan', '3 Tahun 5 Bulan', '3 Tahun 6 Bulan', '3 Tahun 7 Bulan', '3 Tahun 8 Bulan', '3 Tahun 9 Bulan', '3 Tahun 10 Bulan', '3 Tahun 11 Bulan', '4 Tahun',
+                    '4 Tahun Bulan', '4 Tahun 2 Bulan', '4 Tahun 3 Bulan', '4 Tahun 4 Bulan', '4 Tahun 5 Bulan', '4 Tahun 6 Bulan', '4 Tahun 7 Bulan', '4 Tahun 8 Bulan', '4 Tahun 9 Bulan', '4 Tahun 10 Bulan', '4 Tahun 11 Bulan', '5 Tahun'],
+            datasets: [
+            {
+                label: 'Data Jumlah Status Normal',  
+                data: dataLineChartArrayNormal,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                 ],
                 borderWidth: 1
-            }]
+            },
+            {
+                label: 'Data Jumlah Status Sangat Pendek',  
+                data: dataLineChartArraySangatPendek,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            },
+            {
+                label: 'Data Jumlah Status Pendek',  
+                data: dataLineChartArrayPendek,
+                backgroundColor: [
+                    'rgba(255, 206, 86, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 206, 86, 1)',
+                ],
+                borderWidth: 1
+            },
+            {
+                label: 'Data Jumlah Status Tinggi',  
+                data: dataLineChartArrayTinggi,
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                ],
+                borderWidth: 1
+            },
+        ]
         },
         options: {
             scales: {
+                x: {
+                    stacked: true,
+                },
                 y: {
-                    beginAtZero: true
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'value'
+                        }
                 }
             }
         }
     });
 
-    const barChart2YearCtx = document.getElementById('barChart2Year');
-    const barChart2YearChart = new Chart(barChart2YearCtx, {
-        type: 'bar',
-        data: 
-        {
-            labels: ['1 Tahun 1 Bulan', '1 Tahun 2 Bulan', '1 Tahun 3 Bulan', '1 Tahun 4 Bulan', '1 Tahun 5 Bulan', '1 Tahun 6 Bulan', '1 Tahun 7 Bulan', '1 Tahun 8 Bulan', '1 Tahun 9 Bulan', '1 Tahun 10 Bulan', '1 Tahun 11 Bulan', '2 Tahun'],
-            datasets: [{
-                label: 'Grafik Jumlah Stunting Tahun Pertama',  
-                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // const barChart2YearCtx = document.getElementById('barChart2Year');
+    // const barChart2YearChart = new Chart(barChart2YearCtx, {
+    //     type: 'bar',
+    //     data: 
+    //     {
+    //         labels: ['1 Tahun 1 Bulan', '1 Tahun 2 Bulan', '1 Tahun 3 Bulan', '1 Tahun 4 Bulan', '1 Tahun 5 Bulan', '1 Tahun 6 Bulan', '1 Tahun 7 Bulan', '1 Tahun 8 Bulan', '1 Tahun 9 Bulan', '1 Tahun 10 Bulan', '1 Tahun 11 Bulan', '2 Tahun'],
+    //         datasets: [{
+    //             label: 'Grafik Jumlah Stunting Tahun Pertama',  
+    //             data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255, 99, 132, 1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
 
-    const barChart3YearCtx = document.getElementById('barChart3Year');
-    const barChart3earChart = new Chart(barChart3YearCtx, {
-        type: 'bar',
-        data: {
-            labels: ['2 Tahun 1 Bulan', '2 Tahun 2 Bulan', '2 Tahun 3 Bulan', '2 Tahun 4 Bulan', '2 Tahun 5 Bulan', '2 Tahun 6 Bulan', '2 Tahun 7 Bulan', '2 Tahun 8 Bulan', '2 Tahun 9 Bulan', '2 Tahun 10 Bulan', '2 Tahun 11 Bulan', '3 Tahun'],
-            datasets: [{
-                label: 'Grafik Jumlah Stunting Tahun Pertama',  
-                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // const barChart3YearCtx = document.getElementById('barChart3Year');
+    // const barChart3earChart = new Chart(barChart3YearCtx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['2 Tahun 1 Bulan', '2 Tahun 2 Bulan', '2 Tahun 3 Bulan', '2 Tahun 4 Bulan', '2 Tahun 5 Bulan', '2 Tahun 6 Bulan', '2 Tahun 7 Bulan', '2 Tahun 8 Bulan', '2 Tahun 9 Bulan', '2 Tahun 10 Bulan', '2 Tahun 11 Bulan', '3 Tahun'],
+    //         datasets: [{
+    //             label: 'Grafik Jumlah Stunting Tahun Pertama',  
+    //             data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255, 99, 132, 1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
 
-    const barChart4YearCtx = document.getElementById('barChart4Year');
-    const barChart4YearChart = new Chart(barChart4YearCtx, {
-        type: 'bar',
-        data: {
-            labels: ['3 Tahun 1 Bulan', '3 Tahun 2 Bulan', '3 Tahun 3 Bulan', '3 Tahun 4 Bulan', '3 Tahun 5 Bulan', '3 Tahun 6 Bulan', '3 Tahun 7 Bulan', '3 Tahun 8 Bulan', '3 Tahun 9 Bulan', '3 Tahun 10 Bulan', '3 Tahun 11 Bulan', '4 Tahun'],
-            datasets: [{
-                label: 'Grafik Jumlah Stunting Tahun Pertama',  
-                data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // const barChart4YearCtx = document.getElementById('barChart4Year');
+    // const barChart4YearChart = new Chart(barChart4YearCtx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['3 Tahun 1 Bulan', '3 Tahun 2 Bulan', '3 Tahun 3 Bulan', '3 Tahun 4 Bulan', '3 Tahun 5 Bulan', '3 Tahun 6 Bulan', '3 Tahun 7 Bulan', '3 Tahun 8 Bulan', '3 Tahun 9 Bulan', '3 Tahun 10 Bulan', '3 Tahun 11 Bulan', '4 Tahun'],
+    //         datasets: [{
+    //             label: 'Grafik Jumlah Stunting Tahun Pertama',  
+    //             data: [12, 19, 3, 5, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255, 99, 132, 1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
 </script>
 
 <script type="text/javascript">
