@@ -12,10 +12,7 @@ const ROOT_PRIVACY_POLICY_PAGE = 'user.privacy-policy.';
 class PrivacyPolicyController extends Controller
 {
     //
-    public function __construct()
-    {
-        $this->middleware('CheckSession');
-    }
+
 
     public function index(){
         return $this->__view('index');
