@@ -25,6 +25,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/privacy-policy', 'Main\User\PrivacyPolicyController@index');
+
 
 Route::get('/login', 'Auth\LoginController@login')->name('login');
 Route::post('/post_login', 'Auth\LoginController@post_login')->name('post_login');
