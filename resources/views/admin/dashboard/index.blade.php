@@ -8,6 +8,13 @@
     <div class="section-header">
         <h1>Dashboard</h1>
     </div>
+    <div class="col-md-12 overflow-auto mt-4 mb-4">
+        <div class="btn-group col-md-3 offset-md-9 btn-group-justified" role="group">
+            <a href='http://stuntech.id:8000/api/v1/download_excel?json_body={"model_names": ["StuntingTrace"]}' class="btn btn-success legitRipple" target="_blank">
+                Download Excel
+            </a>
+        </div>
+    </div>
     <div class="section-table">
         <div class="row">
             <div class="col-md-12">
