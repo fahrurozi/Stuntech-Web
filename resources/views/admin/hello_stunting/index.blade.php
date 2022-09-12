@@ -31,7 +31,7 @@
                             @foreach($doctors as $doctor)
                             <tr>
                                 <td>{{$doctor->id}}</td>
-                                <td class="py-2"><img style="height: 100px; width: 150px" src="{{getenv('API_URL')."static/".$doctor->article_cover_file}}" alt=""></td>
+                                <td class="py-2"><img style="height: 100px; width: 150px" src="https://images.weserv.nl/?url={{getenv('API_URL')."static/".$doctor->article_cover_file}}" alt=""></td>
                                 <td>{{$doctor->title}}</td>
                                 <td>{{$doctor->article_tags}}</td>
                                 <td>{{$doctor->article_sub_type}}</td>

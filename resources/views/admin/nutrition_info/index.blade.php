@@ -32,7 +32,7 @@
                             @foreach($articles as $article)
                             <tr class="mb-2">
                                 <td>{{$article->id}}</td>
-                                <td class="py-2"><img style="height: 120px; width: 120px" src="{{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
+                                <td class="py-2"><img style="height: 120px; width: 120px" src="https://images.weserv.nl/?url={{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
                                 <td>{{$article->title}}</td>
                                 <td>{{$article->date}}</td>
                                 <td>{{$article->article_type}}</td>

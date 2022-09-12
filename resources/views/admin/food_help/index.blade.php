@@ -30,7 +30,7 @@
                             @foreach($locations as $location)
                             <tr>
                                 <td>{{$location->id}}</td>
-                                <td class="py-2"><img style="height: 100px; width: 150px" src="{{getenv('API_URL')."static/".$location->article_cover_file}}" alt=""></td>
+                                <td class="py-2"><img style="height: 100px; width: 150px" src="https://images.weserv.nl/?url={{getenv('API_URL')."static/".$location->article_cover_file}}" alt=""></td>
                                 <td>{{$location->title}}</td>
                                 <td>{{$location->article_sub_type}}</td>
                                 <td>    

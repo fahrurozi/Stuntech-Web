@@ -33,7 +33,7 @@
                             @foreach($articles as $article)
                             <tr>
                                 <td>{{$article->id}}</td>
-                                <td class="py-2"><img style="height: 100px; width: 150px" src="{{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
+                                <td class="py-2"><img style="height: 100px; width: 150px" src="https://images.weserv.nl/?url={{getenv('API_URL')."static/".$article->article_cover_file}}" alt=""></td>
                                 <td>{{$article->title}}</td>
                                 <td>{{$article->date}}</td>
                                 <td>{{$article->article_sub_type}}</td>
